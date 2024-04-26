@@ -65,12 +65,12 @@ async def restart_handler(_, m):
 
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text("**Hi!, I'm PyroBot. I Can Download All Links In A Txt File & Send Them To You.\n\nUse /help To Get Some Help 😉\n\n Use /up_vid Command to Upload Videos in Streamable Formate & /up_dov to Upload In Document Formate!!!**")
+    editable = await m.reply_text("**Alive**")
 
 
 @bot.on_message(filters.command(["up_vid"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text("Send txt file Now**")
+    editable = await m.reply_text("Send txt**")
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await input.delete(True)
@@ -100,14 +100,14 @@ async def account_login(bot: Client, m: Message):
     except:
         arg = 0
 
-    editable = await m.reply_text("**Enter Title For File. Send 'De' To Use Default File Name.**")
+    editable = await m.reply_text("**Enter Title or de**")
     input0: Message = await bot.listen(editable.chat.id)
     raw_text0 = input0.text
     if raw_text0 == 'De':
         CR = raw_text0
 
     
-    await m.reply_text("**Enter Resolution \nExamples: __480 = SD Quality\n             720 = HD Quality\n             1080 = FHD Quality__**")
+    await m.reply_text("**Enter Resolution**")
     input2: Message = await bot.listen(editable.chat.id)
     raw_text2 = input2.text
         
